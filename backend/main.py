@@ -12,6 +12,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://edupath-real.vercel.app"],  # Your Vercel frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # ===== IMPORTS IA =====
 from ai.recommender import EduPathRecommender
 from ai.quiz_engine import AdaptiveQuizEngine
