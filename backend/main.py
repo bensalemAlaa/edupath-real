@@ -15,7 +15,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://edupath-real.vercel.app"],  # Your Vercel frontend URL
+    allow_origins=["*"],  # Your Vercel frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
