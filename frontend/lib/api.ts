@@ -1,4 +1,5 @@
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+console.log("API_BASE is using:", API_BASE);
 
 export function getToken() {
   if (typeof window === "undefined") return null;
