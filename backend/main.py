@@ -42,7 +42,8 @@ from ai.quiz_engine import AdaptiveQuizEngine
 # Initialisation des moteurs IA
 recommender = EduPathRecommender()
 quiz_engine = AdaptiveQuizEngine()
-DB_PATH = Path(__file__).resolve().parent / "edupath.sqlite"
+import os
+DB_PATH = Path(os.getenv("DATABASE_PATH", Path(__file__).resolve().parent / "edupath.sqlite"))
 TOKEN_SECRET = "edupath-dev-secret-change-in-prod"
 TOKEN_TTL_SECONDS = 60 * 60 * 24 * 7
 

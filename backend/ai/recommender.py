@@ -9,7 +9,8 @@ class EduPathRecommender:
     MODEL_FEATURES = ["stream", "average_band", "math_band", "physics_band", "subject3_band", "location_pref"]
 
     def __init__(self):
-        self.db_path = os.path.join(os.path.dirname(__file__), "..", "edupath.sqlite")
+        import os
+self.db_path = os.getenv("DATABASE_PATH", os.path.join(os.path.dirname(__file__), "..", "edupath.sqlite"))
         self.track_keywords = {
             "computer": ["computer", "software", "cyber", "data", "ai", "telecommunication", "electronics"],
             "engineering": ["engineering", "industrial", "electrical", "mechanical", "civil", "electronics", "telecommunication"],
