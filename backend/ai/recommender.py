@@ -10,7 +10,7 @@ class EduPathRecommender:
 
     def __init__(self):
         import os
-self.db_path = os.getenv("DATABASE_PATH", os.path.join(os.path.dirname(__file__), "..", "edupath.sqlite"))
+        self.db_path = os.getenv("DATABASE_PATH", os.path.join(os.path.dirname(__file__), "..", "edupath.sqlite"))
         self.track_keywords = {
             "computer": ["computer", "software", "cyber", "data", "ai", "telecommunication", "electronics"],
             "engineering": ["engineering", "industrial", "electrical", "mechanical", "civil", "electronics", "telecommunication"],
