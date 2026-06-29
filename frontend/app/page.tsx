@@ -4,6 +4,7 @@ import { LogoMark } from "@/app/components/logo-mark";
 export default function HomePage() {
   return (
     <main className="galaxy-landing landing-page relative min-h-screen overflow-hidden">
+      {/* Background Decorative Gradients */}
       <div className="pointer-events-none absolute -left-24 top-0 h-80 w-80 rounded-full bg-blue-300/15 blur-3xl" />
       <div className="pointer-events-none absolute right-0 top-8 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl" />
       <div className="pointer-events-none absolute left-[12%] top-[62%] h-56 w-56 rounded-full bg-amber-200/20 blur-3xl" />
@@ -20,25 +21,31 @@ export default function HomePage() {
         </header>
 
         <section className="my-auto">
-          <div className="glass-panel rounded-[2rem] px-8 py-12 text-center md:px-14 md:py-16" style={{ caretColor: "transparent" }}>
+          <div
+            className="glass-panel rounded-[2rem] px-8 py-12 text-center md:px-14 md:py-16"
+            style={{ caretColor: "transparent" }}
+          >
             <p className="mx-auto mb-5 inline-block rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-sm text-cyan-200">
               AI Orientation Platform
             </p>
             <h1 className="text-4xl font-extrabold leading-tight md:text-6xl">
               Find Your Best
               <br />
-              <span className="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">University Path</span>
+              <span className="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
+                University Path
+              </span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-lg text-blue-200">
               Clear guidance after BAC, without confusion.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link href="/login" className="glow-btn rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-3 font-semibold text-white">
-                Let&apos;s Get Started
-              </Link>
-              <Link href="/register" className="rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-semibold transition hover:bg-white/20">
-                Create Account
+            {/* MODIFIED: Button now points directly to the main layout workspace */}
+            <div className="mt-8 flex items-center justify-center">
+              <Link
+                href="/dashboard"
+                className="glow-btn rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-4 font-semibold text-white text-lg transition-transform hover:scale-105"
+              >
+                Get Started
               </Link>
             </div>
           </div>
